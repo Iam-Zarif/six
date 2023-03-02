@@ -40,7 +40,7 @@ if(data.length > 6){
         <!-- Modal -->
         <div class="modal fade "  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content p-5" >
+    <div class="modal-content p-lg-5" >
     
       <div class="modal-header">
        
@@ -130,7 +130,7 @@ let popUpDetails = (data) => {
 <div class ="card container">
    <div><img src ="${data.image_link[0]}" class ="img-fluid p-4"></div>
    <h3 class = "text-center">${data.input_output_examples[0].input}</h3>
-   <h5 class = "text-center mt-4 p-4 text-secondary">${data.input_output_examples[0].output}</h5>
+   <h5 class = "text-center mt-4 p-lg-4 text-secondary">${data.input_output_examples[0].output}</h5>
     </div>
 </div>
 
