@@ -81,19 +81,19 @@ let popUpDetails = (data) => {
     modalBody.innerHTML = `
     <div class ="d-flex flex-lg-row flex-column gap-4 container">
     <div class ="container">
-    <div class="card p-4 d-flex flex-lg-row flex-column container" >
+    <div class="card p-lg-4 d-flex flex-lg-row flex-column container" >
   <div class="card-body container">
     <h5 class="card-title fw-bold">${data.description}</h5>
     
 
     <div class ="d-flex flex-lg-row flex-column gap-3 mt-4 container">
-    <div class= "bg-warning px-3 py-2 rounded-4"><p class="fw-bold text-center container">${data.pricing[0].price}</p>
+    <div class= "bg-warning px-lg-3 py-lg-2 rounded-4"><p class="fw-bold text-center container">${data.pricing[0].price}</p>
          <p class="fw-bold text-center">${data.pricing[0].plan}</p>
     </div>
-    <div class= "bg-info px-3 py-2 rounded-4"><p class="fw-bold text-center">${data.pricing[1].price}</p>
+    <div class= "bg-info px-lg-3 py-lg-2 rounded-4"><p class="fw-bold text-center">${data.pricing[1].price}</p>
          <p class="fw-bold text-center">${data.pricing[1].plan}</p>
     </div>
-    <div class= "bg-success px-3 py-2 rounded-4"><p class="fw-bold text-center">${data.pricing[2].price}</p>
+    <div class= "bg-success px-lg-3 py-lg-2 rounded-4"><p class="fw-bold text-center">${data.pricing[2].price}</p>
          <p class="fw-bold text-center">${data.pricing[2].plan}</p>
     </div>
     </div>
