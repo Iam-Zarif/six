@@ -5,6 +5,10 @@ let loadData = () => {
     .then((data) => loadData1(data.data.tools));
 };
 let loadData1 = (data) => {
+if(data.length > 6){
+    data = data.slice(0 , 6);
+}
+
   for (let i of data) {
     // console.log(i);
     let mainCard = document.getElementById("mainCard");
@@ -34,9 +38,9 @@ let loadData1 = (data) => {
 
   <section id="modalSection" class="container">
         <!-- Modal -->
-        <div class="modal fade"  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content p-5" style="width: 70rem;">
+        <div class="modal fade "  id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content p-5" >
     
       <div class="modal-header">
        
@@ -75,15 +79,15 @@ let popUpDetails = (data) => {
     console.log(data.input_output_examples[0].input);
     let modalBody = document.getElementById("modal-body");
     modalBody.innerHTML = `
-    <div class ="d-flex gap-4">
-    <div>
-    <div class="card p-4 d-flex" style="width: 30rem;">
-  <div class="card-body">
+    <div class ="d-flex flex-lg-row flex-column gap-4 container">
+    <div class ="container">
+    <div class="card p-4 d-flex flex-lg-row flex-column container" >
+  <div class="card-body container">
     <h5 class="card-title fw-bold">${data.description}</h5>
     
 
-    <div class ="d-flex gap-3 mt-4">
-    <div class= "bg-warning px-3 py-2 rounded-4"><p class="fw-bold text-center">${data.pricing[0].price}</p>
+    <div class ="d-flex flex-lg-row flex-column gap-3 mt-4 container">
+    <div class= "bg-warning px-3 py-2 rounded-4"><p class="fw-bold text-center container">${data.pricing[0].price}</p>
          <p class="fw-bold text-center">${data.pricing[0].plan}</p>
     </div>
     <div class= "bg-info px-3 py-2 rounded-4"><p class="fw-bold text-center">${data.pricing[1].price}</p>
@@ -95,10 +99,10 @@ let popUpDetails = (data) => {
     </div>
 
 
-  <div class = ""> 
-<div class="d-flex justify-content-between mt-4">
+  <div class = "container"> 
+<div class="d-flex flex-lg-row flex-column justify-content-between mt-4 container">
 
-<div><h3 class="mt-4">Features</h3>
+<div class ="container"><h3 class="mt-4">Features</h3>
    <p class="card-text fw-semibold mt-4 text-secondary"> . ${data.features[1].feature_name}</p>
         <p class="card-text fw-semibold text-secondary"> . ${data.features[2].feature_name}</p>
         <p class="card-text fw-semibold text-secondary"> . ${data.features[3].feature_name}</p></div>
@@ -123,7 +127,7 @@ let popUpDetails = (data) => {
     
     
     </div>
-<div class ="card">
+<div class ="card container">
    <div><img src ="${data.image_link[0]}" class ="img-fluid p-4"></div>
    <h3 class = "text-center">${data.input_output_examples[0].input}</h3>
    <h5 class = "text-center mt-4 p-4 text-secondary">${data.input_output_examples[0].output}</h5>
