@@ -77,8 +77,9 @@ let popUp = (id) => {
     .then((data) => popUpDetails(data.data));
 };
 
+
 let popUpDetails = (data) => {
-  // console.log(data.accuracy.score);
+  console.log(data.integrations[0]);
   let modalBody = document.getElementById("modal-body");
   modalBody.innerHTML = `
     <div class ="d-flex flex-lg-row flex-column gap-4 container">
