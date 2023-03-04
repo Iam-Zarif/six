@@ -69,7 +69,7 @@ let loadData1 = (data) => {
 //
 
 let popUp = (id) => {
-  //   console.log(published_in);
+    //  console.log(data.description);
   let url = `https://openapi.programming-hero.com/api/ai/tool/${id}`;
 
   fetch(url)
@@ -321,6 +321,9 @@ seeMore.addEventListener("click", function () {
 //
 //
 //
+//  document.getElementById("sortByDate").addEventListener('click', function(){
+
+//  });
 
 //
 //
